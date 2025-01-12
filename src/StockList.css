@@ -1,0 +1,204 @@
+/* Background image only for StockList page */
+.stock-list-container {
+    background-image: url('https://img.freepik.com/premium-photo/dark-blue-sea-level-rising-ray-internet-big-data-background_476006-5801.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh; /* Full viewport height */
+    color: #df1313; /* Optional: Adjust text color for readability */
+    padding: 20px; /* Optional: Add padding for better spacing */
+}
+
+.stock-list-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255,); /* Lightening effect with white overlay */
+    z-index: 1; /* Ensure overlay is above the background */
+}
+
+/* Cloud shape container */
+.stock-overview {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    background-color: #d4f358;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0 0 30px rgba(249, 0, 0, 0.993);
+    display: inline-block;
+    width: 300px;
+    font-style: solid black;
+}
+
+.stock-overview.show {
+    opacity: 1;
+}
+
+/* Cloud Shape using Pseudo-elements */
+.stock-overview::before, .stock-overview::after {
+    content: '';
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgb(247, 34, 34);
+}
+
+.stock-overview::before {
+    width: 60px;
+    height: 60px;
+    top: -25px;
+    left: -30px;
+}
+
+.stock-overview::after {
+    width: 90px;
+    height: 90px;
+    top: -30px;
+    right: -40px;
+}
+
+/* Style for Stock Table */
+table {
+    width: 80%;  /* Set table width (optional) */
+    max-width: 1000px;  /* Optional: Set a max width for the table */
+    margin: 0 auto;  /* Center the table horizontally */
+    border-collapse: collapse;
+    margin-top: 30px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+/* Table Header and Data Cells */
+th, td {
+    padding: 12px 20px;
+    text-align: center;
+    font-size: 14px;
+    color: black; /* Set table text to black */
+}
+
+th {
+    background-color: #ff0000;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+}
+
+td {
+    background-color: #0d0c0c;
+    border-top: 1px solid #ddd;
+}
+
+/* Table row alternating background color */
+td:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+td:nth-child(even) {
+    background-color: #ffffff;
+}
+
+td:hover {
+    background-color: #e1f7fa;
+    cursor: pointer;
+}
+
+/* Hover Effect for Table Rows */
+tbody tr:hover {
+    background-color: #1d1e1e;
+}
+
+/* Stock Value and Percentage Change Styling */
+td:nth-child(4), td:nth-child(5) {
+    font-weight: bold;
+}
+
+td:nth-child(5) {
+    color: green;
+}
+
+td:nth-child(5):not(:contains('N/A')) {
+    color: #ff3b30;
+}
+
+td:nth-child(5):contains('N/A') {
+    color: grey;
+}
+/* Button Style */
+button {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 40px;
+    display: block;
+    margin: 0px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+}
+
+/* Hover Effect: Change background color to purple */
+button:hover {
+    background-color: #9000ff; /* Purple color on hover */
+}
+
+/* Focus effect when clicked (optional) */
+button:focus {
+    outline: none;
+}
+
+
+/* Marquee Styling (if needed) */
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff0000;
+    background-color: #fef600;
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    animation: scroll-left 10s linear infinite;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .stock-overview {
+        font-size: 24px;
+    }
+
+    th, td {
+        font-size: 12px;
+        padding: 10px;
+        height: 50px;
+    }
+
+    button {
+        width: 150px;
+    }
+}

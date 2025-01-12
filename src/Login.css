@@ -1,0 +1,240 @@
+/* General Layout */
+.page-container {
+  margin: 0;
+  height: 100vh;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)),url('https://img.freepik.com/premium-photo/smart-parking-management-system-efficient-wallpaper_987764-44678.jpg?w=900') no-repeat center center fixed; Add your background image URL here */
+  background-size: cover;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+ /* font-family: Roboto, Poppins, Lora;*/
+ display: flex;
+ 
+}
+
+.page-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /*background: rgba(0, 0, 0, 0.4)*/
+  background: rgba(255, 255, 255,0.2); /* Darken the background with a semi-transparent black */
+  z-index: -1; /* Ensure overlay is behind the content */
+}
+
+
+
+.left-section {
+  flex: 3; /* Takes up 3/4th of the screen */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-side h1 {
+  font-size: 4.5rem; /* Larger font size */
+  text-align: center;
+  color: #fffffff8; /* White color */
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8); /* Subtle shadow */
+  margin: 0;
+  padding: 10px;
+  font-weight: bold;
+  z-index: 2; /* Ensures text is above the overlay */
+}
+
+.left-side .tagline {
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-left:10%;
+  text-align: center;
+  font-weight: 450;
+  z-index: 2;
+  max-width: 80%;
+  line-height: 2;
+}
+
+/* .left-side .decorative-line {
+  width: 60%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin: 10px auto;
+  z-index: 2;
+} */
+
+.left-side h1,
+.left-side .tagline,
+.left-side .decorative-line {
+opacity: 0;
+animation: fadeIn 1.5s ease forwards;
+}
+
+.left-side h1 {
+animation-delay: 0.7s;
+}
+
+.left-side .decorative-line {
+animation-delay: 1.3s;
+}
+
+.left-side .tagline {
+animation-delay: 1.8s;
+}
+
+/* Fade-In Keyframe */
+@keyframes fadeIn {
+from {
+  opacity: 0;
+}
+to {
+  opacity: 1;
+}
+}
+
+.right-section {
+  flex: 1.5; /* Takes up 1/4th of the screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right:5%;
+  height:800px;
+  margin: 5px;
+}
+
+.login-form-container {
+  width: 100%;
+  max-width: 500px;
+  height:500px;
+  padding: 20px;
+  margin-bottom: 300px;
+  background-color:black; /* Black background for the form */
+  border-radius: 8px;
+  color: white; /* Text color inside the form */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.auth-toggle {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+.auth-toggle a {
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.auth-toggle a.active {
+  text-decoration: underline;
+}
+
+.login-page .login-form-container .form-group {
+  margin-bottom: 0px !important;
+}
+
+.login-page .login-form-container input {
+  width: 90%;
+  max-width:380px;
+  padding: 5px;
+  border: 1px solid #28a745;
+  border-radius: 5px;
+  background-color: black;
+  color: white; /* Text color inside the input */
+  font-size: 16px;
+  transition: all 0.3s ease ;
+}
+
+.login-page .login-form-container input::placeholder {
+  color: #888; /* Grey placeholder text */
+}
+
+.login-page .login-form-container input:focus {
+  outline: none;
+  border-color: 34d058; /* Green border on focus */
+  background-color: #222;/*grey scale - if want remove*/
+  box-shadow: 0 0 8px 2px rgba(0, 255, 0, 0.5); /* Lightning effect */
+}
+
+.login-page .login-form-container button {
+  padding: 10px 20px;
+  background-color: #28a745 ;
+  color: white;
+  border: none;
+  border-radius: 5px !important;
+  font-size: 16px;
+  cursor: pointer;
+  overflow: hidden;
+  width: 35%; /* Adjust the width of the button */
+  max-width: 50%;
+  margin-left: 30% !important;
+}
+
+.login-page .login-form-container button:hover {
+  background-color:#2f8b43;
+  transform: scale(1.05); /* Slightly increase size */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.forgot-password {
+  display: block;
+  margin-top: 18px;
+  text-align: center;
+  color: #28a745 ;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.error_l {
+  border-color: red;
+  box-shadow: 0 0 5px red;
+}
+
+.error-message_l {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    flex-direction: column; /* Stack the sections vertically */
+  }
+
+  .left-section {
+    display: none; /* Hide the left section on small screens */
+  }
+
+  .right-section {
+    flex: 1; /* Make the right section take the full screen */
+    background-color: rgba(0, 0, 0, 0.688); /* Set black background for the right side */
+    padding: 20px; /* Add padding for the form */
+  }
+
+  /* Adjust font size for smaller screens */
+  .login-form-container {
+    font-size: 1.2rem; /* Increase font size */
+    width: 90%; /* Make the form slightly larger */
+    max-width: 450px; /* Max width increased slightly */
+  }
+
+  .auth-toggle a {
+    font-size: 1.5rem; /* Larger font size for links */
+  }
+
+  .login-page .login-form-container input {
+    font-size: 1.2rem; /* Larger text inside inputs */
+    width:80%;
+    margin-left: 8%;;
+  }
+ 
+  .forgot-password {
+    font-size: 1.2rem; /* Larger font size for the forgot password link */
+  }
+}

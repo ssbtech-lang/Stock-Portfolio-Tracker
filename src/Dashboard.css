@@ -1,0 +1,246 @@
+/* Styling for the main container */
+div {
+  text-align: center;
+  padding: 20px;
+}
+
+body {
+  background-image: url('https://www.shutterstock.com/image-illustration/economy-forex-market-growth-concept-600nw-2303672707.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+
+/* Styling for h1 */
+h1 {
+  font-family: 'Algerian', serif; /* Use the Algerian font */
+  text-transform: uppercase; /* Make the text uppercase */
+  color: #ff5733; /* Choose a unique color */
+  text-align: center; /* Center align the text */
+  font-size: 2.5em; /* Increase the font size */
+  margin-bottom: 20px; /* Add spacing below the heading */
+}
+
+/* Styling for the metrics section */
+h2 {
+  font-family: Arial, sans-serif; /* Set a simple font */
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+p {
+  font-family: 'Verdana', sans-serif;
+  font-size: 1.2em;
+  margin: 5px 0;
+  color: #333; /* Dark text color */
+}
+
+/* Styling for the button */
+button {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.1em;
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.help-container {
+  padding: 10px;
+  margin: 0 auto;
+  width:70%;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.help-header {
+  margin-top: 0px;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: #333;
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+  background-color: #d46c6c;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.help-container .steps,
+.help-container .faq {
+  margin-bottom: 50px;
+}
+
+.help-container .steps h2,
+.help-container .faq h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.help-container .steps-list {
+  display: grid;
+  justify-items: center;
+}
+
+.help-container .step {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 300px; /* Adjust height based on preference */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white; /* Ensure text is visible on the background */
+}
+
+.help-container .step h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: black; /* Make sure the header is visible */
+}
+
+.help-container .step p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.help-container .faq {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.help-container .faq h2 {
+  margin-bottom: 20px;
+}
+
+.help-container .faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.help-container .faq-item {
+  background-color: rgb(233, 228, 228);
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.help-container .faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.help-container .faq-answer {
+  padding: 10px;
+  background-color: #fafafa;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #666;
+}
+
+.help-container .faq-arrow {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.help-container .faq-arrow.open {
+  transform: rotate(180deg);
+}
+
+.help-container .contact-support {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.781);
+  color:white;
+  padding: 15px;
+  margin-top: 60px;
+}
+
+.help-container .contact-support p {
+  font-size: 1.2rem;
+  color: grey;
+  margin-bottom: 10px;
+}
+
+.help-container .support-email {
+  color: #ff6a95;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.help-container .support-email:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries for Smaller Screens */
+
+@media (max-width: 768px) {
+  .help-container {
+    padding: 15px;
+  }
+
+  .help-header {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .help-container .steps h2{
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+  }
+
+  .help-container .steps-list {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .help-container .step {
+    width: 100%;
+    padding: 10px;
+    height: auto; /* Adjust the height for smaller screens */
+  }
+
+  .help-container .step h3 {
+    font-size: 1.3rem;
+  }
+
+  .help-container .faq h2 {
+    font-size: 1.5rem;
+  }
+
+  .help-container .faq-item {
+    padding: 10px;
+  }
+
+  .help-container .faq-answer {
+    font-size: 0.9rem;
+  }
+
+  .help-header {
+    font-size: 2rem;
+    padding: 15px;
+  }
+}

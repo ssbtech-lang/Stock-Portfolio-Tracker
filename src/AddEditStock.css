@@ -1,0 +1,256 @@
+/* General styles for the page */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    min-height: 100vh;
+    background-color: #f4f4f9; /* Light background color for the page */
+}
+
+/* Styling for the Add Stock and Edit Stock headings */
+h2 {
+    color: #fff;  /* Change the color to white for better contrast */
+    font-size: 2rem;
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* Optional: add a shadow to improve visibility */
+}
+
+
+.add-stock-container {
+    display: flex;
+    flex-wrap: wrap; /* Ensures elements wrap in smaller screens */
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Styles for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: transparent; /* Make background fully transparent */
+    border: 2px solid white; /* White outline around the table */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+table th {
+    background-color: rgba(0, 123, 255, 0.8); /* Semi-transparent background for table headers */
+    color: #fff;
+    font-weight: bold;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: rgba(242, 242, 242, 0.4); /* Transparent even rows */
+}
+
+table tbody tr:hover {
+    background-color: rgba(233, 236, 239, 0.6); /* Transparent hover effect */
+}
+
+table td button {
+    padding: 4px 2px;
+    border: none;
+    width: 100px;
+    margin-top: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+table td button:hover {
+    opacity: 0.9;
+}
+
+table td button:nth-child(1) {
+    background-color: #28a745;
+    color: white;
+}
+
+table td button:nth-child(2) {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Styles for the form container */
+.form-container {
+    width: 35%;
+    padding: 20px;
+    background-color: transparent; /* Make background fully transparent */
+    border: 2px solid white; /* White outline around the form */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+.form-container h2 {
+    color: #007bff; /* Change heading color to blue */
+    font-style: italic solid black;
+    margin-top: 50px;
+    font-size: 1.8em; /* Larger font size for the headings */
+    text-align: center; /* Center-align the heading */
+}
+
+/* Form fields styles */
+form div {
+    margin-bottom: 30px; /* Increased margin between form fields */
+}
+
+form input, form select, form textarea {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 10px;
+    background-color: #fff;  /* Ensure form fields are white */
+}
+
+form input::placeholder, form textarea::placeholder {
+    color: #aaa; /* Set placeholder text color */
+}
+
+/* Styles for form buttons */
+form button {
+    padding: 10px 15px;
+    background-color: #7e6bf9;
+    color: #fff;
+    width: 100px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+form button[type="button"] {
+    background-color: #6c757d;
+}
+
+form button[type="button"]:hover {
+    background-color: #5a6268;
+}
+
+/* Success Toast Customization */
+.Toastify__toast--success {
+    background-color: #4CAF50; /* Green background for success */
+    width: 500px; /* Set width for the toast */
+    padding: 10px 20px; /* Add padding around text */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Align items to the top */
+    align-items: flex-start; /* Align items to the left */
+    max-width: 500px; /* Prevent toast from being too wide */
+    border-radius: 8px; /* Rounded corners */
+    position: relative;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Toast Customization */
+.Toastify__toast {
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    justify-content: flex-start; /* Align items to the top */
+    align-items: flex-start; /* Align items to the left */
+    padding: 10px;
+    font-size: 1em;
+    color: white;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    z-index: 2; /* Ensure message content stays above */
+}
+
+/* Success Icon Styling */
+.Toastify__toast-icon {
+    margin-bottom: 5px; /* Add space between icon and message */
+    font-size: 1.5em;
+}
+
+/* Close button customization */
+.Toastify__close-button {
+    color: white;
+    font-size: 1.2em;
+    margin-left: 10px; /* Adjust margin to align the close button */
+    cursor: pointer;
+    z-index: 3; /* Keep the close button on top */
+}
+
+/* Adjust the container for positioning the toast */
+.Toastify__toast-container--top-center {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Hover effect for the toast */
+.Toastify__toast:hover {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+}
+
+/* Progress Bar customization */
+.Toastify__progress-bar {
+    background-color: #388E3C; /* Green color for progress bar */
+    height: 2px; /* Make the progress bar thin */
+    width: 100%; /* Full width of the toast */
+    position: absolute; /* Position it at the bottom */
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 5px;
+    bottom: 0;
+    left: 0;
+    z-index: 1; /* Keep the progress bar below the content */
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+    .add-stock-container {
+        flex-direction: column;
+        align-items: center; /* Center align the columns */
+    }
+
+    .form-container {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .form-container h2 {
+        font-size: 1.5rem;
+        margin-top: 10px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    table th, table td {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    form input, form textarea, form select {
+        width: 95%;
+        padding: 8px;
+    }
+
+    form button {
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 12px;
+    }
+}
